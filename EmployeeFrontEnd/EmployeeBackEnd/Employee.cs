@@ -23,8 +23,13 @@ namespace EmployeeBackEnd
                 $"Bank Account: {Bank}\n" +
                 $"IRD: {IRD}\n" +
                 $"Hourly Pay: {Pay}\n" +
-                $"Hours Worked {Hrs}\n";
+                $"Weekly Hours Worked: {Hrs}\n" +
+                $"Weekly Wage: ${Math.Round(Pay * Hrs,2)}";
+
         }
+
+        
+
 
     }
 }

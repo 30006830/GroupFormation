@@ -88,13 +88,72 @@ namespace EmployeeFrontEnd
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-            e1.Name = textBoxName.Text;
-            e1.Age = int.Parse(textBoxAge.Text);
-            e1.Bank = textBoxBankAccNo.Text;
-            e1.IRD = textBoxIRDNo.Text;
-            e1.Pay = double.Parse(textBoxPayPerHr.Text);
-            e1.Hrs = double.Parse(textBoxHoursWorked.Text);
-            labelDetails.Text = e1.EmployeeDetails();
+            if (textBoxName.Text.Length >1 )
+            {
+                if (textBoxAge.Text.Length >= 1 && int.TryParse(textBoxAge.Text, out int success1))
+                {
+                    if (textBoxBankAccNo.Text.Length >= 15)
+                    {
+                        if (textBoxIRDNo.Text.Length > 1)
+                        {
+                            if (textBoxPayPerHr.Text.Length > 1 && double.TryParse(textBoxPayPerHr.Text, out double success2))
+                            {
+                                if (textBoxHoursWorked.Text.Length > 1 && double.TryParse(textBoxHoursWorked.Text, out double success3))
+                                {
+                                    e1.Name = textBoxName.Text;
+                                    e1.Age = int.Parse(textBoxAge.Text);
+                                    e1.Bank = textBoxBankAccNo.Text;
+                                    e1.IRD = textBoxIRDNo.Text;
+                                    e1.Pay = double.Parse(textBoxPayPerHr.Text);
+                                    e1.Hrs = double.Parse(textBoxHoursWorked.Text);
+                                    labelDetails.Text = e1.EmployeeDetails();
+                                    labelHoursWorked.Text = "Hours Worked:";
+                                }
+                                else
+                                {
+                                    labelHoursWorked.Text = "Hours Worked: *This Feild is reqired*";
+                                    labelName.Text = "Name:";
+                                    labelAge.Text = "Age:";
+                                    labelBankAccNo.Text = "Bank Account No:";
+                                    labelIRDNo.Text = "IRD No:";
+                                    labelPayPerHr.Text = "Pay (Hr):";
+                                }
+                            }
+                            else
+                            {
+                                labelPayPerHr.Text = "Pay (Hr): *This Feild is reqired*";
+                                labelName.Text = "Name:";
+                                labelAge.Text = "Age:";
+                                labelBankAccNo.Text = "Bank Account No:";
+                                labelIRDNo.Text = "IRD No:";
+                            }
+                        }
+                        else
+                        {
+                            labelIRDNo.Text = "IRD No: *This Feild is reqired*";
+                            labelName.Text = "Name:";
+                            labelAge.Text = "Age:";
+                            labelBankAccNo.Text = "Bank Account No:";
+                        }
+                        
+                    }
+                    else
+                    {
+                        labelBankAccNo.Text = "Bank Account No: *This Field is reqired*";
+                        labelName.Text = "Name:";
+                        labelAge.Text = "Age:";
+                    }
+                }
+                else
+                {
+                    labelAge.Text = "Age: *This Field is reqired*";
+                    labelName.Text = "Name:";
+                }
+            }
+            else
+            {
+                labelName.Text = "Name: *This Field is reqired*";
+            }   
 
         }
 
