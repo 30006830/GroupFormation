@@ -91,10 +91,10 @@ namespace EmployeeFrontEnd
             e1.Name = textBoxName.Text;
             e1.Age = int.Parse(textBoxAge.Text);
             e1.Bank = textBoxBankAccNo.Text;
-            e1.IRD = int.Parse(textBoxIRDNo.Text);
+            e1.IRD = textBoxIRDNo.Text;
             e1.Pay = double.Parse(textBoxPayPerHr.Text);
             e1.Hrs = double.Parse(textBoxHoursWorked.Text);
-            label1.Text = e1.EmployeeDetails();
+            labelDetails.Text = e1.EmployeeDetails();
 
         }
 

@@ -9,7 +9,7 @@ namespace EmployeeBackEnd
     public class Employee
     {
         public string Bank { get; set; }
-        public int IRD { get; set; }
+        public string IRD { get; set; }
         public double Pay { get; set; }
         public double Hrs { get; set; }
         public string Name { get; set; }
@@ -17,7 +17,8 @@ namespace EmployeeBackEnd
 
         public string EmployeeDetails()
         {
-            return $"Name: {Name}\n" +
+            return "New Employee Record Created...\n\n" +
+                $"Name: {Name}\n" +
                 $"Age: {Age}\n" +
                 $"Bank Account: {Bank}\n" +
                 $"IRD: {IRD}\n" +

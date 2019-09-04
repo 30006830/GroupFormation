@@ -42,7 +42,7 @@
             this.labelPayPerHr = new System.Windows.Forms.Label();
             this.labelHoursWorked = new System.Windows.Forms.Label();
             this.buttonSubmit = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelDetails = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // GroupName
@@ -165,30 +165,33 @@
             // 
             // buttonSubmit
             // 
-            this.buttonSubmit.Location = new System.Drawing.Point(24, 301);
+            this.buttonSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonSubmit.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSubmit.Location = new System.Drawing.Point(24, 394);
             this.buttonSubmit.Name = "buttonSubmit";
-            this.buttonSubmit.Size = new System.Drawing.Size(75, 23);
+            this.buttonSubmit.Size = new System.Drawing.Size(144, 44);
             this.buttonSubmit.TabIndex = 15;
-            this.buttonSubmit.Text = "Submit";
-            this.buttonSubmit.UseVisualStyleBackColor = true;
+            this.buttonSubmit.Text = "Submit Details";
+            this.buttonSubmit.UseVisualStyleBackColor = false;
             this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
-            // label1
+            // labelDetails
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(524, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.labelDetails.AutoSize = true;
+            this.labelDetails.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDetails.Location = new System.Drawing.Point(529, 79);
+            this.labelDetails.Name = "labelDetails";
+            this.labelDetails.Size = new System.Drawing.Size(0, 23);
+            this.labelDetails.TabIndex = 16;
+            this.labelDetails.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelDetails);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.labelHoursWorked);
             this.Controls.Add(this.labelPayPerHr);
@@ -205,7 +208,7 @@
             this.Controls.Add(this.GroupName);
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Employee Form";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -228,7 +231,7 @@
         private System.Windows.Forms.Label labelPayPerHr;
         private System.Windows.Forms.Label labelHoursWorked;
         private System.Windows.Forms.Button buttonSubmit;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelDetails;
     }
 }
 
